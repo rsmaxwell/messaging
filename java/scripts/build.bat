@@ -4,17 +4,18 @@
 @set OUTPUT=%PROJECT%\output\main
 @set DIST=%OUTPUT%\dist
 @set CLASSES=%OUTPUT%\classes
-@set SOURCE=%PROJECT%\src
-@set RESOURCES=%PROJECT%\resources
+@set ROOT=%PROJECT%\src\main
+@set SOURCE=%ROOT%\java
+@set RESOURCES=%ROOT%\resources
 
 @rd /S /Q %OUTPUT%
 @mkdir %DIST%
 
-dir /b /s %SOURCE%\*.java > %OUTPUT%\files.txt
+@dir /b /s %SOURCE%\*.java > %OUTPUT%\files.txt
 javac -g -d %CLASSES% @%OUTPUT%\files.txt
 
 @cd %CLASSES%
-jar cfm %DIST%\messaging.jar %PROJECT%\manifest.txt .
+jar cfm %DIST%\messaging.jar %ROOT%\manifest.txt .
 
 @cd %RESOURCES%
 jar uf %DIST%\messaging.jar .
