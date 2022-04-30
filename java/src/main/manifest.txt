@@ -1,0 +1,8 @@
+Main-Class: com.rsmaxwell.adder.AdderServer
+Built-By: Richard Maxwell
+Specification-Title: Network Messaging Example
+Specification-Version: 1.2
+Specification-Vendor: Richard Maxwell
+Implementation-Title: Network Messaging Example
+Implementation-Version: 1
+Implementation-Vendor: Richard Maxwell
