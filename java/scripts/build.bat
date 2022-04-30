@@ -15,7 +15,7 @@
 javac -g -d %CLASSES% @%OUTPUT%\files.txt
 
 @cd %CLASSES%
-jar cfm %DIST%\echo.jar %ROOT%\manifest.txt .
+jar cfm %DIST%\messaging.jar %ROOT%\manifest.txt .
 
 @cd %RESOURCES%
-jar uf %DIST%\echo.jar .
+jar uf %DIST%\messaging.jar .

@@ -4,4 +4,4 @@
 @set OUTPUT=%PROJECT%\output\main
 @set DIST=%OUTPUT%\dist
 
-java -classpath %DIST%\echo.jar com.rsmaxwell.adder.AdderClient localhost 4444
+java -classpath %DIST%\messaging.jar com.rsmaxwell.adder.AdderClient localhost 4444
