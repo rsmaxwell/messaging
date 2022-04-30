@@ -6,7 +6,6 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.Socket;
-import java.net.UnknownHostException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -75,7 +74,7 @@ public class AdderClient {
 					break;
 				}
 
-				String word2 = words[0];
+				String word2 = words[1];
 				int number2 = 0;
 				try {
 					number2 = Integer.parseInt(word2);
@@ -93,12 +92,8 @@ public class AdderClient {
 				header = headerHandler.readMessageHeader(in);
 			}
 
-		} catch (UnknownHostException e) {
-			System.err.println("Don't know about host " + hostName);
-			System.exit(1);
-		} catch (IOException e) {
-			System.err.println("Couldn't get I/O for the connection to " + hostName);
-			System.exit(1);
+		} catch (Throwable e) {
+			System.out.println(e.getClass().getSimpleName() + ": " + e.getMessage());
 		}
 	}
 }

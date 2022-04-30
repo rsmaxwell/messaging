@@ -58,8 +58,7 @@ public class AdderServer {
 			}
 
 		} catch (IOException e) {
-			System.out.println("Exception caught when trying to listen on port " + portNumber + " or listening for a connection");
-			System.out.println(e.getMessage());
+			System.out.println(e.getClass().getSimpleName() + ": " + e.getMessage());
 		}
 	}
 }
